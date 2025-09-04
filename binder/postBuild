@@ -3,8 +3,11 @@ set -e
 
 echo "[postBuild] Installing and enabling classic nbextensions..."
 
+# pip installing
+pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+
 # Install extension assets into the current environment prefix
-#jupyter contrib nbextension install --sys-prefix
+jupyter contrib nbextension install --sys-prefix
 
 # Enable the configuration UI (adds an 'Nbextensions' tab in classic)
 jupyter nbextensions_configurator enable --sys-prefix
@@ -23,3 +26,4 @@ jupyter nbextension enable freeze/main --sys-prefix
 
 
 echo "[postBuild] Done."
+
