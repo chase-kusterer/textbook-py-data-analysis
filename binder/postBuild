@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ENV_NAME=py-textbook  # <-- must match environment.yml 'name'
+ENV_NAME=notebook
 
 echo "[postBuild] Using conda env: $ENV_NAME"
 
