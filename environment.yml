@@ -6,21 +6,27 @@ channels:
 dependencies:
   - ca-certificates
   - certifi
+  - exceptiongroup
   - conda
   - ipykernel
   - ipython_genutils
   - ipywidgets
+  - ipython_pygments_lexers
   - isort
   - itemadapter
   - itemloaders
   - notebook=6.5.4
+  - nbconvert
   - jupyter_contrib_nbextensions
   - jupyter_nbextensions_configurator
   - numpy=1.26.4
   - mathjax
   - matplotlib=3.9.2
+  - mistune
   - openpyxl
+  - openssl
   - pandas=2.2.3
+  - pandoc
   - seaborn=0.13.2
   - scipy
   - scikit-learn=1.5.2
@@ -28,6 +34,8 @@ dependencies:
   - sphinx
   - statsmodels
   - tornado=6.4.1
+  - traitlets
+  - typing_extensions
   - lifelines=0.30.0
   - nbconvert=7.16.4
   - sqlite
