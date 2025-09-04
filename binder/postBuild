@@ -4,7 +4,7 @@ set -e
 echo "[postBuild] Installing and enabling classic nbextensions..."
 
 # Install extension assets into the current environment prefix
-jupyter contrib nbextension install --sys-prefix
+#jupyter contrib nbextension install --sys-prefix
 
 # Enable the configuration UI (adds an 'Nbextensions' tab in classic)
 jupyter nbextensions_configurator enable --sys-prefix
@@ -19,6 +19,7 @@ jupyter nbextension enable ruler/main --sys-prefix
 jupyter nbextension enable scroll_down/main --sys-prefix
 jupyter nbextension enable splitcell/splitcell --sys-prefix
 jupyter nbextension enable freeze/main --sys-prefix
+
 
 
 echo "[postBuild] Done."
