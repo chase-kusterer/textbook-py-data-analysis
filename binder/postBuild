@@ -16,5 +16,11 @@ jupyter nbextension enable execute_time/ExecuteTime --sys-prefix || true
 jupyter nbextension enable hinterland/hinterland --sys-prefix || true
 jupyter nbextension enable codefolding/main --sys-prefix       || true
 jupyter nbextension enable varInspector/main --sys-prefix      || true
+jupyter nbextension enable exercise2/main --sys-prefix       || true
+jupyter nbextension enable ruler/main --sys-prefix       || true
+jupyter nbextension enable scroll_down/main --sys-prefix       || true
+jupyter nbextension enable splitcell/splitcell --sys-prefix       || true
+jupyter nbextension enable freeze/main --sys-prefix       || true
+
 
 echo "[postBuild] Done."
