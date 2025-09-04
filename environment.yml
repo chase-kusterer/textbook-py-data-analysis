@@ -42,4 +42,6 @@ dependencies:
   - pip:
     - ipyleaflet==0.18.2
     - ipython==8.9.0
+    - jupyter-server==1.*
+    - jupyterlab==3.*
     - mamba
