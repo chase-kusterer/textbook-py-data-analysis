@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Start nbclassic as the front-end, land on /tree
+# breadcrumb so we can confirm this file actually ran
+echo "nbclassic start executed at $(date)" > /home/jovyan/.nbclassic_started
+
+# Launch nbclassic on Jupyter Server, land on /tree
 exec jupyter nbclassic \
   --ServerApp.default_url=/tree \
   --ip=0.0.0.0 --port="${PORT:-8888}" --no-browser
