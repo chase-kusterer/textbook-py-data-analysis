@@ -1,26 +1,31 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "[postBuild] Enabling classic Notebook nbextensions..."
+ENV_NAME=py-textbook  # <-- must match environment.yml 'name'
 
-# Enable the configurator (UI tab) — classic Notebook 6.x
-jupyter nbextensions_configurator enable --sys-prefix || true
+echo "[postBuild] Using conda env: $ENV_NAME"
 
-# If the serverextension path is needed in some images:
-jupyter serverextension enable --py jupyter_nbextensions_configurator --sys-prefix || true
+conda run -n "$ENV_NAME" python -c "import sys; print('python', sys.version)"
+conda run -n "$ENV_NAME" python -c "import notebook; print('notebook', notebook.__version__)"
+
+# Enable the configurator (classic Notebook 6.x)
+conda run -n "$ENV_NAME" jupyter nbextensions_configurator enable --sys-prefix || true
+conda run -n "$ENV_NAME" jupyter serverextension enable --py jupyter_nbextensions_configurator --sys-prefix || true
 
 # Enable specific extensions (skip quietly if one isn't present)
-jupyter nbextension enable toc2/main --sys-prefix              || true
-jupyter nbextension enable collapsible_headings/main --sys-prefix || true
-jupyter nbextension enable execute_time/ExecuteTime --sys-prefix || true
-jupyter nbextension enable hinterland/hinterland --sys-prefix || true
-jupyter nbextension enable codefolding/main --sys-prefix       || true
-jupyter nbextension enable varInspector/main --sys-prefix      || true
-jupyter nbextension enable exercise2/main --sys-prefix       || true
-jupyter nbextension enable ruler/main --sys-prefix       || true
-jupyter nbextension enable scroll_down/main --sys-prefix       || true
-jupyter nbextension enable splitcell/splitcell --sys-prefix       || true
-jupyter nbextension enable freeze/main --sys-prefix       || true
+conda run -n "$ENV_NAME" jupyter nbextension enable toc2/main --sys-prefix              || true
+conda run -n "$ENV_NAME" jupyter nbextension enable collapsible_headings/main --sys-prefix || true
+conda run -n "$ENV_NAME" jupyter nbextension enable execute_time/ExecuteTime --sys-prefix || true
+conda run -n "$ENV_NAME" jupyter nbextension enable hinterland/hinterland --sys-prefix || true
+conda run -n "$ENV_NAME" jupyter nbextension enable codefolding/main --sys-prefix       || true
+conda run -n "$ENV_NAME" jupyter nbextension enable varInspector/main --sys-prefix      || true
+conda run -n "$ENV_NAME" jupyter nbextension enable exercise2/main --sys-prefix       || true
+conda run -n "$ENV_NAME" jupyter nbextension enable ruler/main --sys-prefix       || true
+conda run -n "$ENV_NAME" jupyter nbextension enable scroll_down/main --sys-prefix       || true
+conda run -n "$ENV_NAME" jupyter nbextension enable splitcell/splitcell --sys-prefix       || true
+conda run -n "$ENV_NAME" jupyter nbextension enable freeze/main --sys-prefix       || true
 
+# Show what’s enabled (for logs)
+conda run -n "$ENV_NAME" jupyter nbextension list || true
 
 echo "[postBuild] Done."
