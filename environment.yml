@@ -17,6 +17,7 @@ dependencies:
   - itemloaders
   - notebook=6.5.4
   - nbconvert
+  - nbclassic
   - numpy=1.26.4
   - mathjax
   - matplotlib=3.9.2
