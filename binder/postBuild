@@ -10,7 +10,7 @@ echo "[postBuild] Installing and enabling classic nbextensions..."
 #jupyter contrib nbextension install --sys-prefix
 
 # Enable the configuration UI (adds an 'Nbextensions' tab in classic)
-jupyter nbextensions_configurator enable --sys-prefix
+#jupyter nbextensions_configurator enable --sys-prefix
 
 # Enable specific extensions you want (edit this list to taste)
 jupyter nbextension enable toc2/main --sys-prefix
