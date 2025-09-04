@@ -2,4 +2,9 @@
 ### A Nontechincal Approach for Nontechnical People
 This repo houses chapters and associated files.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chase-kusterer/textbook-py-data-analysis/HEAD?labpath=)
+-- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chase-kusterer/textbook-py-data-analysis/HEAD?labpath=)
+
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chase-kusterer/textbook-py-data-analysiss/HEAD?urlpath=tree)
+
+
