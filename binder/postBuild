@@ -1,29 +1,20 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
-echo "[postBuild] Installing and enabling classic nbextensions..."
+echo "[postBuild] Enabling classic Notebook nbextensions..."
 
-# pip installing
-#pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+# Enable the configurator (UI tab) — classic Notebook 6.x
+jupyter nbextensions_configurator enable --sys-prefix || true
 
-# Install extension assets into the current environment prefix
-jupyter contrib nbextension install --sys-prefix
+# If the serverextension path is needed in some images:
+jupyter serverextension enable --py jupyter_nbextensions_configurator --sys-prefix || true
 
-# Enable the configuration UI (adds an 'Nbextensions' tab in classic)
-jupyter nbextensions_configurator enable --sys-prefix
-
-# Enable specific extensions you want (edit this list to taste)
-jupyter nbextension enable toc2/main --sys-prefix
-jupyter nbextension enable collapsible_headings/main --sys-prefix
-jupyter nbextension enable codefolding/main --sys-prefix
-jupyter nbextension enable varInspector/main --sys-prefix
-jupyter nbextension enable exercise2/main --sys-prefix
-jupyter nbextension enable ruler/main --sys-prefix
-jupyter nbextension enable scroll_down/main --sys-prefix
-jupyter nbextension enable splitcell/splitcell --sys-prefix
-jupyter nbextension enable freeze/main --sys-prefix
-
-
+# Enable specific extensions (skip quietly if one isn't present)
+jupyter nbextension enable toc2/main --sys-prefix              || true
+jupyter nbextension enable collapsible_headings/main --sys-prefix || true
+jupyter nbextension enable execute_time/ExecuteTime --sys-prefix || true
+jupyter nbextension enable hinterland/hinterland --sys-prefix || true
+jupyter nbextension enable codefolding/main --sys-prefix       || true
+jupyter nbextension enable varInspector/main --sys-prefix      || true
 
 echo "[postBuild] Done."
-
