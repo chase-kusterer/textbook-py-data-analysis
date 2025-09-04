@@ -17,8 +17,6 @@ dependencies:
   - itemloaders
   - notebook=6.5.4
   - nbconvert
-  - jupyter_contrib_nbextensions
-  - jupyter_nbextensions_configurator
   - numpy=1.26.4
   - mathjax
   - matplotlib=3.9.2
@@ -45,3 +43,5 @@ dependencies:
     - jupyter-server==1.*
     - jupyterlab==3.*
     - mamba
+    - jupyter_contrib_nbextensions
+    - jupyter_nbextensions_configurator
