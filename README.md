@@ -1,2 +1,3 @@
-# Python-for-Business-Analytics
-This repo is meant to store the Python for Business Analytics Textbook
+# From Print to Prediction - A Beginner's Guide to Python for Data Analysis
+### A Nontechincal Approach for Nontechnical People
+This repo houses chapters and associated files.
