@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e
+
+echo "[postBuild] Installing and enabling classic nbextensions..."
+
+# Install extension assets into the current environment prefix
+jupyter contrib nbextension install --sys-prefix
+
+# Enable the configuration UI (adds an 'Nbextensions' tab in classic)
+jupyter nbextensions_configurator enable --sys-prefix
+
+# Enable specific extensions you want (edit this list to taste)
+jupyter nbextension enable toc2/main --sys-prefix
+jupyter nbextension enable collapsible_headings/main --sys-prefix
+jupyter nbextension enable codefolding/main --sys-prefix
+jupyter nbextension enable varInspector/main --sys-prefix
+jupyter nbextension enable exercise2/main --sys-prefix
+jupyter nbextension enable ruler/main --sys-prefix
+jupyter nbextension enable scroll_down/main --sys-prefix
+jupyter nbextension enable splitcell/splitcell --sys-prefix
+jupyter nbextension enable freeze/main --sys-prefix
+
+
+echo "[postBuild] Done."

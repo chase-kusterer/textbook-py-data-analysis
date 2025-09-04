@@ -1,0 +1,37 @@
+name: py-textbook
+channels:
+  - defaults
+  - conda-forge
+  - pip
+dependencies:
+  - ca-certificates
+  - certifi
+  - conda
+  - ipykernel
+  - ipython_genutils
+  - ipywidgets
+  - isort
+  - itemadapter
+  - itemloaders
+  - notebook=6.5.4
+  - jupyter_contrib_nbextensions
+  - jupyter_nbextensions_configurator
+  - numpy=1.26.4
+  - mathjax
+  - matplotlib=3.9.2
+  - openpyxl
+  - pandas=2.2.3
+  - seaborn=0.13.2
+  - scipy
+  - scikit-learn=1.5.2
+  - six
+  - sphinx
+  - statsmodels
+  - tornado=6.4.1
+  - lifelines=0.30.0
+  - nbconvert=7.16.4
+  - sqlite
+  - pip:
+    - ipyleaflet==0.18.2
+    - ipython==8.9.0
+    - mamba
