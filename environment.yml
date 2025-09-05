@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
+  - cowsay  # fun test package
   - jupyter-server=2.*
   - nbclassic=1.*
   - notebook=6.5.4
