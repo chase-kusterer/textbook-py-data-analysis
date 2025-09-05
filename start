@@ -24,10 +24,7 @@ which jupyter || true
 jupyter --paths || true
 
 # IMPORTANT: replace the shell with the server process
-exec jupyter nbclassic \
-  --ServerApp.default_url=/tree \
-  --ip=0.0.0.0 --port="${PORT:-8888}" \
-  --no-browser --ServerApp.port_retries=0
+exec jupyter nbclassic
 
 #jupyter contrib nbextension install --user
 #jupyter nbextension enable exercise2/main
