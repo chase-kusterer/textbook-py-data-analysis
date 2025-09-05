@@ -5,4 +5,4 @@ jupyter nbextension enable scroll_down/main
 jupyter nbextension enable codefolding/main
 jupyter nbextension enable splitcell/splitcell
 jupyter nbextension enable freeze/main
- echo "Poststart Read Beans!"
+echo "Poststart Read Beans!"
