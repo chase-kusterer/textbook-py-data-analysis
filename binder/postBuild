@@ -1,22 +1,39 @@
-
 #!/usr/bin/env bash
-set -e #-euo pipefail
+set -euo pipefail
 
-# Binder creates the env from environment.yml as 'notebook'
-ENV_NAME=notebook
-
-echo "[postBuild] Locating conda prefix for env: $ENV_NAME"
-CONDA_PREFIX_PATH="$(conda run -n "$ENV_NAME" bash -lc 'echo -n "$CONDA_PREFIX"')"
+echo "[postBuild] Detecting conda/jupyter prefix"
+# Robustly determine the prefix repo2docker is using
+CONDA_PREFIX_PATH="${CONDA_PREFIX:-$(python - <<'PY'
+import os, sys
+print(os.environ.get("CONDA_PREFIX", sys.prefix))
+PY
+)}"
 echo "[postBuild] CONDA_PREFIX=$CONDA_PREFIX_PATH"
 
-# System-level Jupyter config dirs inside the env
+# Ensure nbclassic + configurator are present (install these via environment.yml ideally)
+python -m pip install --no-cache-dir nbclassic jupyter_nbextensions_configurator
+
+# Create config dirs for BOTH ServerApp (new) and NotebookApp (classic)
 NB_D="$CONDA_PREFIX_PATH/etc/jupyter/nbconfig/notebook.d"
-JUP_CONF_D="$CONDA_PREFIX_PATH/etc/jupyter/jupyter_notebook_config.d"
+JUP_NB_D="$CONDA_PREFIX_PATH/etc/jupyter/jupyter_notebook_config.d"
+JUP_SRV_D="$CONDA_PREFIX_PATH/etc/jupyter/jupyter_server_config.d"
+mkdir -p "$NB_D" "$JUP_NB_D" "$JUP_SRV_D"
 
-mkdir -p "$NB_D" "$JUP_CONF_D"
+echo "[postBuild] Force classic as the default landing page"
+# Jupyter Server (Lab 4/Notebook 7 path)
+cat > "$JUP_SRV_D/default_url.json" <<'JSON'
+{
+  "ServerApp": {
+    "default_url": "/tree",
+    "jpserver_extensions": {
+      "nbclassic": true
+    }
+  }
+}
+JSON
 
-echo "[postBuild] Enabling classic default URL"
-cat > "$JUP_CONF_D/default_url.json" <<'JSON'
+# Legacy NotebookApp fallback (harmless if ignored)
+cat > "$JUP_NB_D/default_url.json" <<'JSON'
 {
   "NotebookApp": {
     "default_url": "/tree"
@@ -24,8 +41,8 @@ cat > "$JUP_CONF_D/default_url.json" <<'JSON'
 }
 JSON
 
-echo "[postBuild] Enabling nbextensions configurator serverextension"
-cat > "$JUP_CONF_D/jupyter_nbextensions_configurator.json" <<'JSON'
+echo "[postBuild] Enable nbextensions configurator (classic)"
+cat > "$JUP_NB_D/jupyter_nbextensions_configurator.json" <<'JSON'
 {
   "NotebookApp": {
     "nbserver_extensions": {
@@ -35,7 +52,7 @@ cat > "$JUP_CONF_D/jupyter_nbextensions_configurator.json" <<'JSON'
 }
 JSON
 
-echo "[postBuild] Enabling your classic nbextensions"
+echo "[postBuild] Enable your classic nbextensions"
 cat > "$NB_D/enable_extensions.json" <<'JSON'
 {
   "load_extensions": {
@@ -56,5 +73,4 @@ JSON
 
 echo "[postBuild] Verifying files:"
 ls -R "$CONDA_PREFIX_PATH/etc/jupyter" || true
-
 echo "[postBuild] Done."
