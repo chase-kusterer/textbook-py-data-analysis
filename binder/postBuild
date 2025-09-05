@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ENV_NAME=notebook  # Binder names the env from environment.yml as "notebook"
+# Binder’s conda env from environment.yml is named "notebook"
+ENV_NAME=notebook
 CONDA_PREFIX_PATH="$(conda run -n "$ENV_NAME" bash -lc 'echo -n "$CONDA_PREFIX"')"
 
-# Jupyter Server config dir (enables nbclassic serverextension & default URL)
+# Jupyter Server config (enable nbclassic & set default URL)
 JS_CONF_D="$CONDA_PREFIX_PATH/etc/jupyter/jupyter_server_config.d"
-# Classic UI nbconfig (enables individual nbextensions)
+# Classic Notebook nbconfig (toggle extensions)
 NB_D="$CONDA_PREFIX_PATH/etc/jupyter/nbconfig/notebook.d"
 
 mkdir -p "$JS_CONF_D" "$NB_D"
 
-# Ensure nbclassic server side is on and default goes to /tree
+# Ensure nbclassic is enabled and land on /tree
 cat > "$JS_CONF_D/nbclassic.json" <<'JSON'
 {
   "ServerApp": {
@@ -23,7 +24,7 @@ cat > "$JS_CONF_D/nbclassic.json" <<'JSON'
 }
 JSON
 
-# Enable your classic nbextensions
+# Enabling required classic nbextensions
 cat > "$NB_D/enable_extensions.json" <<'JSON'
 {
   "load_extensions": {
@@ -42,4 +43,6 @@ cat > "$NB_D/enable_extensions.json" <<'JSON'
 }
 JSON
 
-echo "[postBuild] Wrote configs under $CONDA_PREFIX_PATH/etc/jupyter"
+echo "[postBuild] Configs written under: $CONDA_PREFIX_PATH/etc/jupyter"
+
+
