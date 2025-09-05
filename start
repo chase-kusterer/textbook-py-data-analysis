@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set -euo pipefail
+set -x  # debug: echo every command
+
+echo "Poststart Read Beans!"
+
+# --- Make sure conda is available in this non-interactive script
+if [ -f /etc/profile.d/activate-conda.sh ]; then
+  . /etc/profile.d/activate-conda.sh
+fi
+
+# --- Try to activate Binder's env (usually named "notebook")
+if command -v conda >/dev/null 2>&1; then
+  eval "$(conda shell.bash hook)"
+  if conda env list | awk '{print $1}' | grep -qx notebook; then
+    conda activate notebook
+  fi
+fi
+
+# --- Quick diagnostics in Binder logs
+which python || true
+python --version || true
+which jupyter || true
+jupyter --paths || true
+
+# IMPORTANT: replace the shell with the server process
+exec jupyter nbclassic \
+  --ServerApp.default_url=/tree \
+  --ip=0.0.0.0 --port="${PORT:-8888}" \
+  --no-browser --ServerApp.port_retries=0
+
+#jupyter contrib nbextension install --user
+#jupyter nbextension enable exercise2/main
+#jupyter nbextension enable ruler/main
+#jupyter nbextension enable scroll_down/main
+#jupyter nbextension enable codefolding/main
+#jupyter nbextension enable splitcell/splitcell
+#jupyter nbextension enable freeze/main
+
