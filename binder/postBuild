@@ -8,11 +8,14 @@ JS_CONF_D="$CONDA_PREFIX_PATH/etc/jupyter/jupyter_server_config.d"
 NB_D="$CONDA_PREFIX_PATH/etc/jupyter/nbconfig/notebook.d"
 mkdir -p "$JS_CONF_D" "$NB_D"
 
-# Enable nbclassic server and set /tree
-cat > "$JS_CONF_D/nbclassic.json" <<'JSON'
+# Hard-disable JupyterLab even if it’s present; enable nbclassic; land on /tree
+cat > "$JS_CONF_D/000-nb-ui.json" <<'JSON'
 {
   "ServerApp": {
-    "jpserver_extensions": { "nbclassic": true },
+    "jpserver_extensions": {
+      "jupyterlab": false,
+      "nbclassic": true
+    },
     "default_url": "/tree"
   }
 }
