@@ -3,9 +3,9 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - jupyter-server=2.*        # server backend (conda, not pip)
-  - nbclassic=1.*             # classic UI on Jupyter Server
-  - notebook=6.5.4            # classic assets; helps nbextensions
+  - jupyter-server=2.*
+  - nbclassic=1.*
+  - notebook=6.5.4
   - jupyter_contrib_nbextensions
   - jupyter_nbextensions_configurator
   - numpy=1.26.*
@@ -21,5 +21,3 @@ dependencies:
   - pip
   - pip:
       - ipyleaflet==0.18.2
-# NOTE: Do NOT install jupyterlab or jupyter-server via pip here.
-# Keep core Jupyter bits from conda-forge to avoid clashes.
