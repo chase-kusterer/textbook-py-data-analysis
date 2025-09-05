@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
-
-# Binder’s conda env created from environment.yml lives here:
 PREFIX="/srv/conda/envs/notebook"
 
-# ---- Force classic UI on Jupyter Server, disable Lab, land on /tree ----
 JS_CONF_D="$PREFIX/etc/jupyter/jupyter_server_config.d"
-mkdir -p "$JS_CONF_D"
+NB_D="$PREFIX/etc/jupyter/nbconfig/notebook.d"
+mkdir -p "$JS_CONF_D" "$NB_D"
+
+# Force nbclassic, disable Lab, and land on /classic/tree
 cat > "$JS_CONF_D/000-ui.json" <<'JSON'
 {
   "ServerApp": {
@@ -14,25 +14,11 @@ cat > "$JS_CONF_D/000-ui.json" <<'JSON'
       "jupyterlab": false,
       "nbclassic": true
     },
-    "default_url": "/tree"
+    "default_url": "/classic/tree"
   }
 }
 JSON
 
-# (Optional) also drop a classic-only default for NotebookApp just in case:
-JN_CONF_D="$PREFIX/etc/jupyter/jupyter_notebook_config.d"
-mkdir -p "$JN_CONF_D"
-cat > "$JN_CONF_D/000-default-url.json" <<'JSON'
-{
-  "NotebookApp": {
-    "default_url": "/tree"
-  }
-}
-JSON
-
-# ---- Pre-enable your classic nbextensions (no CLI needed) ----
-NB_D="$PREFIX/etc/jupyter/nbconfig/notebook.d"
-mkdir -p "$NB_D"
 cat > "$NB_D/enable_extensions.json" <<'JSON'
 {
   "load_extensions": {
