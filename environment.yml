@@ -3,21 +3,21 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - jupyter-server=2.*
-  - nbclassic=1.*
+  - jupyter-server=2.17.1
+  - nbclassic
   - notebook=6.5.4
   - jupyter_contrib_nbextensions
   - jupyter_nbextensions_configurator
-  - numpy=1.26.*
-  - pandas=2.2.*
-  - matplotlib=3.9.*
-  - seaborn=0.13.*
-  - scikit-learn=1.5.*
+  - numpy=1.26.0
+  - pandas=2.2.0
+  - matplotlib=3.9.0
+  - seaborn=0.13.0
+  - scikit-learn=1.5.0
   - statsmodels
   - scipy
   - ipywidgets
   - openpyxl
-  - lifelines=0.30.*
+  - lifelines=0.30.0
   - pip
   - pip:
       - ipyleaflet==0.18.2
