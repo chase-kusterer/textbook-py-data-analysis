@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-  
+
 # launch nbclassic and land on /tree
 exec jupyter nbclassic \
   --ServerApp.default_url=/tree \
