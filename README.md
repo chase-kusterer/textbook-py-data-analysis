@@ -7,3 +7,6 @@ This repo houses chapters and associated files.
 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chase-kusterer/textbook-py-data-analysis/master?urlpath=nbclassic%2Ftree)
+
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chase-kusterer/textbook-py-data-analysis/master?urlpath=nbclassic/tree)
