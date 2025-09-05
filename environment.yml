@@ -3,7 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - jupyter-server=2.16.0
+  - jupyter-server
   - nbclassic
   - notebook=6.5.4
   - jupyter_contrib_nbextensions
