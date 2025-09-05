@@ -3,14 +3,14 @@ channels:
   - conda-forge
 dependencies:
   - python=3.11
-  - jupyter-server=2.17.1
+  - jupyter-server=2.17.0
   - nbclassic
   - notebook=6.5.4
   - jupyter_contrib_nbextensions
   - jupyter_nbextensions_configurator
   - numpy=1.26.0
   - pandas=2.2.0
-  - matplotlib=3.9.0
+  - matplotlib
   - seaborn=0.13.0
   - scikit-learn=1.5.0
   - statsmodels
