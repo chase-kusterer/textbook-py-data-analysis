@@ -1,5 +1,9 @@
+
 #!/usr/bin/env bash
-set -e
+set -e #-euo pipefail
+
+# Binder creates the env from environment.yml as 'notebook'
+ENV_NAME=notebook
 
 echo "[postBuild] Locating conda prefix for env: $ENV_NAME"
 CONDA_PREFIX_PATH="$(conda run -n "$ENV_NAME" bash -lc 'echo -n "$CONDA_PREFIX"')"
