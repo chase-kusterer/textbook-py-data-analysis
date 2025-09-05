@@ -26,6 +26,7 @@ dependencies:
   - openssl
   - pandas=2.2.3
   - pandoc
+  - python=3.11 # added specific version of Python
   - seaborn=0.13.2
   - scipy
   - scikit-learn=1.5.2
