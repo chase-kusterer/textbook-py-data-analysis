@@ -1,49 +1,27 @@
-name: py-textbook
+name: notebook
 channels:
-  - defaults
   - conda-forge
-  - pip
 dependencies:
-  - ca-certificates
-  - certifi
-  - exceptiongroup
-  - conda
-  - ipykernel
-  - ipython_genutils
-  - ipywidgets
-  - ipython_pygments_lexers
-  - isort
-  - itemadapter
-  - itemloaders
-  - notebook=6.5.4
-  - nbconvert
-  - nbclassic
-  - numpy=1.26.4
-  - mathjax
-  - matplotlib=3.9.2
-  - mistune
-  - openpyxl
-  - openssl
-  - pandas=2.2.3
-  - pandoc
-  - python=3.11 # added specific version of Python
-  - seaborn=0.13.2
-  - scipy
-  - scikit-learn=1.5.2
-  - six
-  - sphinx
+  - python=3.11
+  - jupyter-server=2.*        # server backend (conda, not pip)
+  - nbclassic=1.*             # classic UI on Jupyter Server
+  - notebook=6.5.4            # classic assets; helps nbextensions
+  - jupyter_contrib_nbextensions
+  - jupyter_nbextensions_configurator
+  - numpy=1.26.*
+  - pandas=2.2.*
+  - matplotlib=3.9.*
+  - seaborn=0.13.*
+  - scikit-learn=1.5.*
   - statsmodels
-  - tornado=6.4.1
-  - traitlets
-  - typing_extensions
-  - lifelines=0.30.0
-  - nbconvert=7.16.4
-  - sqlite
+  - scipy
+  - ipywidgets
+  - openpyxl
+  - lifelines=0.30.*
+  # no jupyterlab here
+  # no jupyter-server via pip
+  # no 'conda', 'openssl', 'sqlite' etc. (Binder provides those)
+  - pip
   - pip:
-    - ipyleaflet==0.18.2
-    - ipython==8.9.0
-    - jupyter-server==1.*
-    - jupyterlab==3.*
-    - mamba
-    - jupyter_contrib_nbextensions
-    - jupyter_nbextensions_configurator
+      - ipyleaflet==0.18.2
+      # nothing else here unless you must
