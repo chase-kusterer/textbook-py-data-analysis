@@ -6,3 +6,4 @@
 #jupyter nbextension enable splitcell/splitcell
 #jupyter nbextension enable freeze/main
 echo "Poststart Read Beans!"
+exec jupyter nbclassic --ip=0.0.0.0 --port=$PORT --no-browser
