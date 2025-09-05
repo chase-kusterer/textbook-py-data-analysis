@@ -21,4 +21,3 @@ dependencies:
       - ipyleaflet==0.18.2
       - jupyter-server==2.17.0
       - https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
-      - cowsay  # fun test package
