@@ -2,7 +2,7 @@
 set -e
 
 # Make sure classic notebook is the one launching
-jupyter contrib nbextension install --sys-prefix
+# jupyter contrib nbextension install --sys-prefix
 jupyter nbextensions_configurator enable --sys-prefix
 
 # Enable your chosen extensions
