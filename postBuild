@@ -11,6 +11,12 @@ echo $CONDA_DEFAULT_ENV
 # Or more explicitly
 conda info --envs
 
+echo "Conda packages installed:"
+conda list
+
+echo "Pip packages installed:"
+pip list
+
 #jupyter contrib nbextension install --user
 #jupyter nbextension enable exercise2/main
 #jupyter nbextension enable ruler/main
