@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -e
+
+# Show all environments
+conda env list
+
+# Show the current environment name
+echo "Current environment:"
+echo $CONDA_DEFAULT_ENV
+
+# Or more explicitly
+conda info --envs
+
+#jupyter contrib nbextension install --user
+#jupyter nbextension enable exercise2/main
+#jupyter nbextension enable ruler/main
+#jupyter nbextension enable scroll_down/main
+#jupyter nbextension enable codefolding/main
+#jupyter nbextension enable splitcell/splitcell
+#jupyter nbextension enable freeze/main
