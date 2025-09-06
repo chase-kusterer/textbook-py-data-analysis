@@ -17,10 +17,10 @@ conda list
 echo "Pip packages installed:"
 pip list
 
-#jupyter contrib nbextension install --user
-#jupyter nbextension enable exercise2/main
-#jupyter nbextension enable ruler/main
-#jupyter nbextension enable scroll_down/main
-#jupyter nbextension enable codefolding/main
-#jupyter nbextension enable splitcell/splitcell
-#jupyter nbextension enable freeze/main
+jupyter contrib nbextension install --user
+jupyter nbextension enable exercise2/main
+jupyter nbextension enable ruler/main
+jupyter nbextension enable scroll_down/main
+jupyter nbextension enable codefolding/main
+jupyter nbextension enable splitcell/splitcell
+jupyter nbextension enable freeze/main
