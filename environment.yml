@@ -1,4 +1,4 @@
-name: notebook
+name: py_textbook
 channels:
   - conda-forge
 dependencies:
