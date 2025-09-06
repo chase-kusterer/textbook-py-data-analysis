@@ -10,7 +10,7 @@ Click the launch button above to access the book. This book has been optimized f
 <br><br>
 ### License
 
-© 2025 [Your Name]. All rights reserved.
+© 2025 Chase Kusterer. All rights reserved.
 
 This book is licensed under the 
 [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
