@@ -14,10 +14,9 @@ This is an interactive book: you’ll write and run code in each chapter. Howeve
 <br><br>
 
 ### Recommended
-* Turn on line numbers by doing one of the following after opening any of the chapters:
+Turn on line numbers by doing one of the following after opening any of the chapters:
   * Go to <strong>View → Toggle Line Numbers</strong>
   * Press <em>Shift + L</em> while in command mode.
-* If you are new to Jupyter Notebook, 
 
 <br>
 
