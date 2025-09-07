@@ -1,0 +1,48 @@
+/* hiding the extension toolbar buttons
+button[title="Save and Checkpoint"] {
+    display: none !important;
+}
+*/
+button[title="insert cell below"] {
+    display: none !important;
+}
+
+button[title="cut selected cells"] {
+    display: none !important;
+}
+
+button[title="copy selected cells"] {
+    display: none !important;
+}
+
+button[title="paste cells below"] {
+    display: none !important;
+}
+
+button[title="move selected cells up"] {
+    display: none !important;
+}
+
+button[title="move selected cells down"] {
+    display: none !important;
+}
+
+button[title="Exercise2: Create/Remove exercise"] {
+    display: none !important;
+}
+
+button[title="Toggle split/centered cell style"] {
+    display: none !important;
+}
+
+button[title="lift restrictions from selected cells"] {
+    display: none !important;
+}
+
+button[title="make selected cells read-only"] {
+    display: none !important;
+}
+
+button[title="freeze selected cells"] {
+    display: none !important;
+}
