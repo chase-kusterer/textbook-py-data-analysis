@@ -1,4 +1,6 @@
-/* hiding unnneded toolbar buttons */
+/*
+hiding unnneded toolbar buttons
+*/
 button[title="insert cell below"] {
     display: none !important;
 }
@@ -47,12 +49,45 @@ button[title="freeze selected cells"] {
     display: none !important;
 }
 
-/* hiding migration notice (Notebook 7) */
+/* hiding Binder buttons */
+button[title="Download visible"] {
+    display: none !important;
+}
+
+/*
+hiding Binder buttons
+*/
+button[title="Download visible"] {
+    display: none !important;
+}
+
+/* Keeping ability to save in browser
+button[title="Save to browser storage"] {
+    display: none !important;
+}
+
+button[title="Restore from browser storage"] {
+    display: none !important;
+}
+*/
+
+button[title="Visit Binder repository"] {
+    display: none !important;
+}
+
+button[title="Link to this Binder"] {
+    display: none !important;
+}
+
+/*
+hiding migration notice (Notebook 7)
+*/
 #nbclassic_notebook7_banner {
     display: none !important;
 }
 
-/* hiding menus (doesn't work as well as I would like it to)
+/*
+hiding menus (doesn't work as well as I would like it to)
 #edit_menu {
     display: none !important;
 }
@@ -69,7 +104,11 @@ button[title="freeze selected cells"] {
     display: none !important;
 }
 
-/* hiding submenus in File */
+
+
+/*
+hiding submenus in File
+*/
 #download_ipynb,
 #download_html,
 #download_markdown,
