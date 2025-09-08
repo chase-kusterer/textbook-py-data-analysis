@@ -1,8 +1,4 @@
-/* hiding some toolbar buttons */
-button[title="Save and Checkpoint"] {
-    display: none !important;
-}
-
+/* hiding unnneded toolbar buttons */
 button[title="insert cell below"] {
     display: none !important;
 }
