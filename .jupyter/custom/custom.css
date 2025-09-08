@@ -30,6 +30,10 @@ button[title="toggle automatic scrolling down"] {
     display: none !important;
 }
 
+button[title="open the command palette"] {
+    display: none !important;
+}
+
 button[title="Exercise2: Create/Remove exercise"] {
     display: none !important;
 }
