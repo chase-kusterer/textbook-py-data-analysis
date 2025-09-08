@@ -48,7 +48,6 @@ button[title="Toggle split/centered cell style"] {
     display: none !important;
 }
 
-/*
 button[title="lift restrictions from selected cells"] {
     display: none !important;
 }
@@ -60,7 +59,6 @@ button[title="make selected cells read-only"] {
 button[title="freeze selected cells"] {
     display: none !important;
 }
-*/
 
 /* hiding Binder buttons */
 button[title="Download visible"] {
