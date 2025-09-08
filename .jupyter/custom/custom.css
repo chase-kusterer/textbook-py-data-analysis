@@ -1,9 +1,6 @@
 /*
-hiding unnneded toolbar buttons
+hiding unnneded toolbar menus and buttons
 */
-
-/*
-hiding the whole save-to-browser-storage button group */
 #save-notbook {
     display: none !important;
 }
@@ -14,12 +11,6 @@ hiding the menu bar
 #menubar {
     display: none !important;
 }
-
-/*
-button[title="Save and Checkpoint"] {
-    display: none !important;
-}
-*/
 
 button[title="insert cell below"] {
     display: none !important;
@@ -81,16 +72,6 @@ button[title="Download visible"] {
     display: none !important;
 }
 
-/* Keeping ability to save in browser
-button[title="Save to browser storage"] {
-    display: none !important;
-}
-
-button[title="Restore from browser storage"] {
-    display: none !important;
-}
-*/
-
 button[title="Visit Binder repository"] {
     display: none !important;
 }
@@ -107,33 +88,17 @@ hiding migration notice (Notebook 7)
 }
 
 /*
-hiding menus (doesn't work as well as I would like it to)
-#edit_menu {
-    display: none !important;
+removing left margin/padding in toolbar menu
+*/
+#maintoolbar-container {
+    justify-content: flex-start !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
 }
-
-#insert_menu {
-    display: none !important;
-}
-
-#widget_menu {
-    display: none !important;
-}
-
-#help_menu {
-    display: none !important;
-}
-
-
 
 /*
-hiding submenus in File
+ensuring no offset from first button group
 */
-#download_ipynb,
-#download_html,
-#download_markdown,
-#download_rst,
-{
-    display: none !important;
+#maintoolbar-container .btn-group:first-of-type {
+    margin-left: 0 !important;
 }
-*/
