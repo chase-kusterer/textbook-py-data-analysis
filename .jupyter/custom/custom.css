@@ -54,3 +54,34 @@ button[title="make selected cells read-only"] {
 button[title="freeze selected cells"] {
     display: none !important;
 }
+
+/* hiding migration notice (Notebook 7) */
+#nbclassic_notebook7_banner {
+    display: none !important;
+}
+
+/* hiding menus */
+#edit_menu {
+    display: none !important;
+}
+
+#insert_menu {
+    display: none !important;
+}
+
+#widget_menu {
+    display: none !important;
+}
+
+#help_menu {
+    display: none !important;
+}
+
+/* hiding submenus in File */
+#download_ipynb,
+#download_html,
+#download_markdown,
+#download_rst,
+{
+    display: none !important;
+}
