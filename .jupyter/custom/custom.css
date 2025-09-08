@@ -56,7 +56,7 @@ button[title="freeze selected cells"] {
     display: none !important;
 }
 
-/* hiding menus */
+/* hiding menus (doesn't work as well as I would like it to)
 #edit_menu {
     display: none !important;
 }
@@ -81,3 +81,4 @@ button[title="freeze selected cells"] {
 {
     display: none !important;
 }
+*/
