@@ -89,16 +89,30 @@ hiding migration notice (Notebook 7)
 
 /*
 removing left margin/padding in toolbar menu
-*/
+
 #maintoolbar-container {
     justify-content: flex-start !important;
     padding-left: 0 !important;
     margin-left: 0 !important;
 }
+*/
 
 /*
 ensuring no offset from first button group
-*/
+
 #maintoolbar-container .btn-group:first-of-type {
+    margin-left: 0 !important;
+}
+*/
+
+
+
+.toolbar-inner.navbar-inner.navbar-nobg {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+
+.toolbar-inner.navbar-inner.navbar-nobg .btn-group:first-of-type {
     margin-left: 0 !important;
 }
