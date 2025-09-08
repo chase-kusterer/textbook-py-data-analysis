@@ -27,10 +27,6 @@ button[title="move selected cells down"] {
     display: none !important;
 }
 
-button[title="toggle automatic scrolling down"] {
-    display: none !important;
-}
-
 button[title="open the command palette"] {
     display: none !important;
 }
