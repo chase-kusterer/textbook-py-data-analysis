@@ -9,6 +9,13 @@ hiding the whole save-to-browser-storage button group */
 }
 
 /*
+hiding the menu bar
+*/
+#menubar {
+    display: none !important;
+}
+
+/*
 button[title="Save and Checkpoint"] {
     display: none !important;
 }
