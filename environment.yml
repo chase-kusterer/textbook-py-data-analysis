@@ -16,6 +16,7 @@ dependencies:
   - ipywidgets
   - openpyxl
   - lifelines=0.30.0
+  - pyarrow
   - pip
   - pip:
       - ipyleaflet==0.18.2
