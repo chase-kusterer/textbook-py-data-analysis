@@ -7,21 +7,19 @@
 Click the **Launch Binder** button above to open the book.
 <br><br>
 This interactive book is designed for readers from less-technical backgrounds. You’ll write and run code in each chapter and learn core concepts through short stories and hands-on exercises.
-
 <br><br>
+
 ### Important - Saving Your Work
 Binder shuts down idle sessions (~10 minutes) and does not automatically save changes after a session ends. Make sure to save before taking a break or closing the book.
 <br><br>
 
-### Special Thanks to Binder
-[Binder](https://mybinder.org/) made it possible for you to open this book with a single click. This has potentially saved every reader hours of setup time.
-
-<br>
-
 ### Customized Jupyter Notebook
 This book runs in a customized version of Jupyter Notebook, including notebook extensions for a smoother reading and coding experience.
+<br><br>
 
-<br>
+### Special Thanks to Binder
+[Binder](https://mybinder.org/) made it possible for you to open this book with a single click. This has potentially saved every reader hours of setup time.
+<br><br>
 
 ### License
 
