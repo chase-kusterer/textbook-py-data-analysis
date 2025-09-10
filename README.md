@@ -4,24 +4,22 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chase-kusterer/textbook-py-data-analysis/master?urlpath=tree&clear_cache=0)
 
-Click the Launch Binder button above to open the book.
-This book has been optimized for the classic Jupyter Notebook interface, including notebook extensions for a smoother reading and coding experience.
-I hope you enjoy exploring it!
+Click the **Launch Binder** button above to open the book.
 <br><br>
-### Important
+This interactive book is designed for readers from less-technical backgrounds. You’ll write and run code in each chapter and learn core concepts through short stories and hands-on exercises.
 
-This is an interactive book: you’ll write and run code in each chapter. However, <strong>changes are not saved</strong> once you close the chapter or remain idle for more than 10 minutes. To keep your work, download a copy: <strong>File → Download as → Notebook (.ipynb)</strong>
+<br><br>
+### Important - Saving Your Work
+Binder shuts down idle sessions (~10 minutes) and does not automatically save changes after a session ends. Make sure to save before taking a break or closing the book.
 <br><br>
 
-### Recommended
-Turn on line numbers by doing one of the following after opening any of the chapters:
-  * Go to <strong>View → Toggle Line Numbers</strong>
-  * Press <em>Shift + L</em> while in command mode.
+### Special Thanks to Binder
+[Binder](https://mybinder.org/) made it possible for you to open this book with a single click. This has potentially saved every reader hours of setup time.
 
 <br>
 
-### Special Thanks to Binder
-[Binder](https://mybinder.org/) made it possible for you to open this book with a single click. This potentially saved every reader hours of setup time.
+### Customized Jupyter Notebook
+This book runs in a customized version of Jupyter Notebook, including notebook extensions for a smoother reading and coding experience.
 
 <br>
 
