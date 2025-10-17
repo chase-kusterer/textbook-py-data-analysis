@@ -8,6 +8,21 @@ Click the **Launch Binder** button above to open the book.
 <br><br>
 This interactive book is designed for readers from less-technical backgrounds. You’ll write and run code in each chapter and learn core concepts through short stories and hands-on exercises.
 <br><br>
+## Table of Contents
+- Chapter 01 - Before Learning Anything Else, Learn This<br>
+- Chapter 02 - Printing, Dynamic Strings, and Escape Sequences<br>
+- Chapter 03 - User Input and Variable Types<br>
+- Chapter 04 - Numbers, Comparisons, and Randomness<br>
+- Chapter 05 - Lists and List Operations<br>
+- Chapter 06 - Conditional Statements and Controlling Input<br>
+- Chapter 07 - for Loops and Basic Data Manipulation<br>
+- Chapter 08 - while Loops and Making Assumptions<br>
+- Chapter 09 - Intro to User-Defined Functions<br>
+- Chapter 10 - Advanced Functions and Exception Handling<br>
+- Chapter 11 - Introduction to DataFrames<br>
+- Chapter 12 - Analyzing DataFrame Quality<br>
+- Chapter 13 - Method Chaining and Missing Values<br>
+- Chapter 14 - Linear Relationships and OLS Regression<br><br>
 
 ### Important - Saving Your Work
 Binder shuts down idle sessions (~10 minutes) and does not automatically save changes after a session ends. Make sure to save before taking a break or closing the book.
