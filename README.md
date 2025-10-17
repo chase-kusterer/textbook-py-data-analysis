@@ -3,7 +3,7 @@
 ### Written by Chase Kusterer
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chase-kusterer/textbook-py-data-analysis/master?urlpath=tree&clear_cache=0)
-
+<br><br>
 Click the **Launch Binder** button above to open the book.
 <br><br>
 This interactive book is designed for readers from less-technical backgrounds. You’ll write and run code in each chapter and learn core concepts through short stories and hands-on exercises.
