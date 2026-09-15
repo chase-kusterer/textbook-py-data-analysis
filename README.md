@@ -8,6 +8,9 @@ Click the Launch Binder button above to open the book.
 This book has been optimized for the classic Jupyter Notebook interface, including notebook extensions for a smoother reading and coding experience.
 I hope you enjoy exploring it!
 <br><br>
+__**Static Mode**__<br>
+Head to the <a href="https://github.com/chase-kusterer/textbook-py-data-analysis/">textbook repository</a> to experience the notebooks in static mode. Note that if you wish to download notebooks to experience them locally, it is highly recommended that you first set up environment.yml (available in the repository).
+<br><br>
 ### Important
 
 This is an interactive book: you’ll write and run code in each chapter. However, <strong>changes are not saved</strong> once you close the chapter or remain idle for more than 10 minutes. To keep your work, download a copy: <strong>File → Download as → Notebook (.ipynb)</strong>
